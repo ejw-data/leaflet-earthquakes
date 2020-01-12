@@ -8,3 +8,21 @@ body,
 html {
   height: 100%;
 }
+
+.info {
+  padding: 1em 1.2em;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+.info h4 {
+  margin: 0 0 1em;
+  color: #777;
+}
+
+.info i{
+  width: 2em;
+  float: left
+}
