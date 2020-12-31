@@ -1,5 +1,5 @@
 # Leaflet Maps
-![Leaflet Map of Earthquakes](https://github.com/ejw-data/[leaflet-challenge]/blob/master/config/images/map1.JPG?raw=true)
+![Leaflet Map of Earthquakes](https://github.com/ejw-data/leaflet-challenge/blob/master/config/images/map1.JPG?raw=true)
 <br>
 ## Objective
 ### This repo is a personal project to familiarize myself with mapbox and leaflet javascript.  I will continue to add onto this repo with new additions and improvements. 
