@@ -11,9 +11,9 @@ https://ejw-data.github.io/leaflet-challenge/leaflet-step-2/
 <br>
 <br>
 ## Noteable Revisions
-| Change Date | Description |
---- | --- | ---
-| 12/30/2020 | Updated mapbox api calls to match new format |
+| Change Date | Description |  
+--- | --- | ---  
+| 12/30/2020 | Updated mapbox api calls to match new format |  
 
 <br>
 <br>
