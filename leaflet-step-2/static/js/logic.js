@@ -20,7 +20,7 @@
   var faultData = "static/data/faultLines.json";
   d3.json(faultData, function(faultgeo) {
     var faults = L.geoJSON(faultgeo.features,{
-      style: function(feature){
+      style: function(){
         return {
           color: "red",
           weight: 1.5,
@@ -40,28 +40,30 @@
   //the createMap() is used in the MAIN section
   function createMap() {
   // Adding tile layer
-    var streetmap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
-      attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-      maxZoom: 22,
-      id: "mapbox.streets",
-      accessToken: API_KEY
-    }).addTo(map);
+  var streetmap = L.tileLayer("https://api.tiles.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+    attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+    maxZoom: 22,
+    id: "mapbox/streets-v11",
+    accessToken: API_KEY
+  });
 
-    var grayscalemap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
-      attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-      maxZoom: 18,
-      id: "mapbox.light",
-      accessToken: API_KEY
-    });
-    
-    var outdoormap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
-      attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-      maxZoom: 18,
-      id: "mapbox.satellite",
-      accessToken: API_KEY
-    });
+  var grayscalemap = L.tileLayer("https://api.tiles.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+    attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+    maxZoom: 18,
+    id: "mapbox/light-v10",
+    accessToken: API_KEY
+  });
+  
+  var outdoormap = L.tileLayer("https://api.tiles.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+    attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+    maxZoom: 18,
+    id: "mapbox/satellite-streets-v11",
+    accessToken: API_KEY
+  });
 
   
+    streetmap.addTo(map);
+    
     // L.control.layers(null, baseMaps, {collapsed: false}).addTo(map);   //removed 'overlayMaps' as first element in list
     controlLayers.addBaseLayer(streetmap, "Street Map");  
     controlLayers.addBaseLayer(grayscalemap, "Grayscale Map"); 
