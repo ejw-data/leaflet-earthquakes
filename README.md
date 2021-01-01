@@ -6,8 +6,8 @@
 <br>
 
 ## Sample Maps
-https://ejw-data.github.io/leaflet-challenge/leaflet-step-1/<br>
-https://ejw-data.github.io/leaflet-challenge/leaflet-step-2/
+https://ejw-data.github.io/leaflet-custom-markers/leaflet-step-1/<br>
+https://ejw-data.github.io/leaflet-custom-markers/leaflet-step-2/
 <br>
 <br>
 ## Noteable Revisions
