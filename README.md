@@ -16,9 +16,9 @@ This repo shows how to use leaflet and d3 to map data from a public api.  In thi
 
 ## Github Pages  
 
-https://ejw-data.github.io/leaflet-earthquakes/leaflet-step-1/   
+https://ejw-data.github.io/leaflet-earthquakes/leaflet-step-1/index.html   
 
-https://ejw-data.github.io/leaflet-earthquakes/leaflet-step-2/   
+https://ejw-data.github.io/leaflet-earthquakes/leaflet-step-2/index.html     
 
 <br>
 
